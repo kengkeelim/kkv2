@@ -1,0 +1,141 @@
+@font-face {
+  font-family: "Courgette", cursive;
+  src: url("https://fonts.googleapis.com/css2?family=Courgette&display=swap");
+}
+
+nav {
+  width: 100vw;
+  height: 10vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.navbar-background {
+  background-color: var(--primaryDarkOpacity08);
+  box-shadow: var(--shadowDark);
+  transition: all 1s ease-in-out;
+}
+
+.navbar-container {
+  width: 90vw;
+  margin: 2vh auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-container * {
+  margin-bottom: 0;
+}
+
+.navbar-intro {
+  color: var(--neutralColor);
+  font-size: calc(var(--tenPlusOne));
+  font-family: "Courgette", cursive;
+  font-weight: bolder;
+  letter-spacing: 2px;
+}
+
+.navbar-items {
+  list-style-type: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 80%;
+  height: 40vh;
+  color: white;
+  font-weight: bolder;
+  background-color: var(--primaryDarkOpacity08);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  transform: translateX(100%);
+  transition: all 1s ease-in-out;
+  box-shadow: var(--shadowDark);
+}
+
+.navbar-items li a {
+  color: white;
+  text-decoration: none;
+}
+
+.navbar-items li a {
+  letter-spacing: 2px;
+}
+
+.navbar-items li a:hover {
+  text-shadow: var(--shadowGreen);
+}
+
+.navbar-items .active {
+  border-bottom: 2px solid var(--CTAHover);
+}
+
+.navbar-items li:last-child {
+  margin-right: 0;
+}
+
+.menu {
+  transition: all 2s ease-in-out;
+  width: 6vh;
+  height: 6vh;
+  filter: invert(1);
+  display: inline-block;
+}
+
+.slideIn {
+  transform: translateX(0);
+}
+
+.fadeIn {
+  animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .navbar-container {
+    height: 6vh;
+  }
+
+  .navbar-intro {
+    text-align: start;
+    width: 30%;
+  }
+
+  .navbar-items {
+    width: 70%;
+    height: auto;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    transform: translateX(0);
+    background-color: transparent;
+    box-shadow: none;
+    position: relative;
+    animation: none;
+  }
+
+  .navbar-items li {
+    margin-right: 3vw;
+  }
+
+  .navbar-items li:last-child {
+    margin-right: 0;
+  }
+
+  .menu {
+    display: none;
+  }
+}

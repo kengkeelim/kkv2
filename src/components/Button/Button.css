@@ -1,0 +1,50 @@
+.button {
+  margin: 1rem auto;
+  display: grid;
+  place-items: center;
+  font-weight: bolder;
+  box-shadow: var(--shadowWhite);
+}
+
+.primarybtn {
+  background-color: var(--CTAColor);
+  color: var(--neutralColor);
+  width: 80%;
+  border-radius: 5px;
+  line-height: calc(2 * (12px + 1vmin));
+  font-size: calc(12px + 1vmin);
+}
+
+.secondarybtn {
+  width: 60%;
+  background-color: var(--neutralColor);
+  color: var(--CTAColor);
+  border: 1px solid var(--CTAColor);
+  border-radius: 30px;
+  line-height: calc(2 * (10px + 1vmin));
+  font-size: calc(10px + 1vmin);
+}
+
+.button:hover {
+  background-color: var(--CTAHover);
+  color: var(--neutralColor);
+  border: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .primarybtn {
+    width: 60%;
+  }
+  .secondarybtn {
+    width: 80%;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .primarybtn {
+    width: 40%;
+  }
+  .secondarybtn {
+    width: 80%;
+  }
+}

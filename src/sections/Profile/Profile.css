@@ -1,0 +1,141 @@
+.split {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-wrapper,
+.about-wrapper {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-photo {
+  width: min(90%, 308px);
+  border-radius: 50%;
+  box-shadow: var(--shadowDark);
+}
+
+.label {
+  width: 80%;
+  height: calc(2 * var(--tenPlus1));
+  line-height: calc(2 * var(--tenPlus1));
+  margin: 1rem auto;
+  display: grid;
+  place-items: center;
+  font-size: var(--tenPlus1);
+  font-weight: bolder;
+  border-radius: 30px;
+  box-shadow: var(--shadowDark);
+  color: var(--darkColor);
+}
+
+.icon-group {
+  margin: 1rem auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 80%;
+  height: auto;
+}
+
+.icon {
+  width: calc(2 * (12px + 2vmin));
+  height: calc(2 * (12px + 2vmin));
+  line-height: calc(2 * (12px + 2vmin));
+  border-radius: 30px;
+  box-shadow: 3px 3px 15px var(--CTAColor);
+  display: grid;
+  place-items: center;
+}
+
+.icon:hover {
+  background-color: var(--CTAHover);
+  box-shadow: none;
+}
+
+.icon:hover img {
+  filter: invert(1);
+}
+
+.icon img {
+  width: calc(12px + 2vmin);
+  height: calc(12px + 2vmin);
+}
+
+.summary-wrapper h2,
+.skills-wrapper h2,
+.certifications-wrapper h2 {
+  text-align: start;
+  color: var(--darkColor);
+}
+
+.summary-wrapper p {
+  text-align: justify;
+  color: var(--greyColor);
+}
+
+.summary-wrapper,
+.skills-wrapper,
+.certifications-wrapper {
+  margin: 1rem 0.5rem;
+  padding: 1rem;
+}
+
+.all-skills {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.skill {
+  font-size: calc(8px + 1vmin);
+  color: #434746;
+  border-radius: 30px;
+  border: 1px solid #434746;
+  padding: 0 8px;
+  width: fit-content;
+  height: auto;
+  white-space: nowrap;
+  margin: 1px;
+}
+
+.certifications-wrapper {
+  font-size: calc(8px + 1vmin);
+}
+
+.all-cert-links {
+  text-align: start;
+}
+
+.cert-link a {
+  text-decoration: underline;
+  text-decoration-color: var(--CTAColor);
+  text-underline-position: under;
+  color: var(--primaryDark);
+}
+
+.cert-link a:hover {
+  background-color: var(--CTAHover);
+  color: var(--neutralColor);
+  text-decoration-color: var(--CTAHover);
+}
+
+@media only screen and (min-width: 992px) {
+  .split {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+  }
+  .profile-wrapper {
+    justify-content: flex-start;
+    margin: 0;
+    padding: 0 2rem;
+  }
+
+  .icon {
+    width: calc(2 * (10px + 2vmin));
+    height: calc(2 * (10px + 2vmin));
+  }
+}

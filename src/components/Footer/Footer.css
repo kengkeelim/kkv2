@@ -1,0 +1,6 @@
+.text-div {
+  margin: 1rem auto;
+  font-size: calc(10px + 1vmin);
+  color: var(--neutralColor);
+  text-align: center;
+}

@@ -1,0 +1,80 @@
+.work {
+  background-color: var(--secondaryColor);
+}
+
+.work-wrapper {
+  width: 80%;
+  margin: 1rem auto;
+}
+
+.work-title {
+  text-align: start;
+}
+
+.work-title h2 {
+  color: var(--darkColor);
+}
+
+.work-all-experiences {
+  display: flex;
+  flex-direction: column;
+}
+
+.work-experience {
+  width: 100%;
+  height: auto;
+  background-color: var(--secondaryLight);
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* .work-experience * {
+  color: white;
+} */
+
+.work-experience h3 {
+  font-style: italic;
+  color: var(--neutralColor);
+}
+
+.work-experience a,
+.work-experience p {
+  text-decoration: none;
+  color: white;
+  /* text-decoration-style: wavy; */
+}
+
+.work-experience p:nth-child(2) {
+  text-align: justify;
+}
+
+@media only screen and (min-width: 768px) {
+  .work-all-experiences {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-items: start;
+  }
+  .work-experience {
+    flex-basis: 290px;
+    margin: 0.5rem;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .work-experience {
+    flex-basis: 48%;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .work-all-experiences {
+    justify-content: center;
+  }
+  .work-experience {
+    flex-basis: 30%;
+  }
+}
